@@ -1,0 +1,17 @@
+{
+  "name": "adaptive-scss",
+  "version": "1.0.0",
+  "description": "scss mixins for adding adaptivity to webapp in one line of code",
+  "main": "src/index.scss",
+  "keywords": [
+    "adaptivity",
+    "media-queries",
+    "scss-media-queries",
+    "sass-media-queries"
+  ],
+  "author": "alex-js-dev",
+  "license": "MIT",
+  "peerDependencies": {
+    "sass-loader": ">10.2.0"
+  }
+}
