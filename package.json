@@ -1,6 +1,6 @@
 {
   "name": "adaptive-scss",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "scss mixins for adding adaptivity to webapp in one line of code",
   "main": "src/index.scss",
   "keywords": [
@@ -9,6 +9,10 @@
     "scss-media-queries",
     "sass-media-queries"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aleksandr-JS-Developer/adaptive-scss.git"
+  },
   "author": "alex-js-dev",
   "license": "MIT",
   "peerDependencies": {
