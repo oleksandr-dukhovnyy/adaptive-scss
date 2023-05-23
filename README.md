@@ -1,4 +1,4 @@
-# adaptive-css
+# adaptive-scss
 
 A minimalistic scss library for working with media queries with the ability to specify custom media breakpoints.
 Great for mobile-first development.
@@ -9,13 +9,13 @@ This library is just a collection of useful mixins. Assembly and processing (min
 ### npm
 
 ```bash
-npm i adaptive-css
+npm i adaptive-scss
 ```
 
 ### yarn
 
 ```bash
-yarn add adaptive-css
+yarn add adaptive-scss
 ```
 
 ## Default breakpoints
