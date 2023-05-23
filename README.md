@@ -36,7 +36,7 @@ yarn add adaptive-css
 This **scss**:
 
 ```scss
-@import 'adaptive-css';
+@import 'adaptive-scss';
 
 body {
   background-color: yellowgreen;
@@ -77,7 +77,7 @@ You can set your own list of breakpoints.
 The easiest way is to create a wrapper mixin.
 
 ```scss
-@import 'adaptive-css';
+@import 'adaptive-scss';
 
 $list: (
   mobile: 0,
