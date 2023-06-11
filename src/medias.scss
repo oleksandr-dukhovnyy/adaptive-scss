@@ -6,6 +6,9 @@
       @content;
     }
   } @else {
+    @debug '_media-up';
+    @debug $medianame;
+    @debug $breakpoints;
     @error 'incurrect $medianame';
   }
 }
@@ -18,6 +21,93 @@
       @content;
     }
   } @else {
-    @error 'incurrect $medianame';
+    @debug '_media-down';
+    @debug $medianame;
+    @debug $breakpoints;
+    @error 'incurrect medianame';
+  }
+}
+
+@mixin _media-up-portrait($medianame, $breakpoints: $breakpoints-list) {
+  $size: map-get($breakpoints, $medianame);
+
+  @if $size {
+    @media (orientation: portrait) and (min-width: $size) {
+      @content;
+    }
+  } @else {
+    @debug '_media-up-portrait';
+    @debug $medianame;
+    @debug $breakpoints;
+    @error 'incurrect medianame';
+  }
+}
+
+@mixin _media-up-landscape($medianame, $breakpoints: $breakpoints-list) {
+  $size: map-get($breakpoints, $medianame);
+
+  @if $size {
+    @media (orientation: landscape) and (min-width: $size) {
+      @content;
+    }
+  } @else {
+    @debug '_media-up-landscape';
+    @debug $medianame;
+    @debug $breakpoints;
+    @error 'incurrect medianame';
+  }
+}
+
+@mixin _media-down-portrait($medianame, $breakpoints: $breakpoints-list) {
+  $size: map-get($breakpoints, $medianame);
+
+  @if $size {
+    @media (orientation: portrait) and (max-width: $size) {
+      @content;
+    }
+  } @else {
+    @debug '_media-down-portrait';
+    @debug $medianame;
+    @debug $breakpoints;
+    @error 'incurrect medianame';
+  }
+}
+
+@mixin _media-down-landscape($medianame, $breakpoints: $breakpoints-list) {
+  $size: map-get($breakpoints, $medianame);
+
+  @if $size {
+    @media (orientation: landscape) and (max-width: $size) {
+      @content;
+    }
+  } @else {
+    @debug '_media-down-landscape';
+    @debug $medianame;
+    @debug $breakpoints;
+    @error 'incurrect medianame';
+  }
+}
+
+@mixin _media-screen {
+  @media screen {
+    @content;
+  }
+}
+
+@mixin _media-print {
+  @media print {
+    @content;
+  }
+}
+
+@mixin _media-portrait {
+  @media (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin _media-landscape {
+  @media (orientation: landscape) {
+    @content;
   }
 }
