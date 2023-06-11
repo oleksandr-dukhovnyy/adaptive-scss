@@ -20,14 +20,14 @@ yarn add adaptive-scss
 
 ## Default breakpoints
 
-| breakpoint name | screen width size |
-| --------------- | ----------------- |
-| xs              | >0px              |
-| sm              | >576px            |
-| md              | >768px            |
-| lg              | >992px            |
-| xl              | >1200px           |
-| xxl             | >1900px           |
+| breakpoint name | screen width size  |
+| --------------- | ------------------ |
+| xs              | >=0px              |
+| sm              | >=576px            |
+| md              | >=768px            |
+| lg              | >=992px            |
+| xl              | >=1200px           |
+| xxl             | >=1900px           |
 
 ## Usage
 
@@ -71,7 +71,7 @@ body {
 }
 ```
 
-### Uage with custom breakpoints list
+### Usage with custom breakpoints list
 
 You can set your own list of breakpoints.
 The easiest way is to create a wrapper mixin.
