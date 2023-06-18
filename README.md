@@ -20,14 +20,14 @@ yarn add adaptive-scss
 
 ## Default breakpoints
 
-| breakpoint name | screen width size  |
-| --------------- | ------------------ |
-| xs              | >=0px              |
-| sm              | >=576px            |
-| md              | >=768px            |
-| lg              | >=992px            |
-| xl              | >=1200px           |
-| xxl             | >=1900px           |
+| breakpoint name | screen width size |
+| --------------- | ----------------- |
+| xs              | >=0px             |
+| sm              | >=576px           |
+| md              | >=768px           |
+| lg              | >=992px           |
+| xl              | >=1200px          |
+| xxl             | >=1900px          |
 
 ## Usage
 
@@ -123,3 +123,239 @@ body {
   }
 }
 ```
+
+### MIXINS
+
+---
+
+#### **\_media-up**
+
+_scss_
+
+```scss
+@include _media-up(sm) {
+  .elem {
+    color: #f00;
+  }
+}
+```
+
+_css_
+
+```css
+@media (max-width: 576px) {
+  .elem {
+    color: #f00;
+  }
+}
+```
+
+---
+
+#### **\_media-down**
+
+_scss_
+
+```scss
+@include _media-down(sm) {
+  .elem {
+    color: #f00;
+  }
+}
+```
+
+_css_
+
+```css
+@media (max-width: 576px) {
+  .elem {
+    color: #f00;
+  }
+}
+```
+
+---
+
+#### **\_media-up-portrait**
+
+_scss_
+
+```scss
+@include _media-up-portrait(sm) {
+  .elem {
+    color: #f00;
+  }
+}
+```
+
+_css_
+
+```css
+@media (orientation: portrait) and (min-width: 576px) {
+  @content;
+}
+```
+
+---
+
+#### **\_media-up-landscape**
+
+_scss_
+
+```scss
+@include _media-up-landscape(sm) {
+  .elem {
+    color: #f00;
+  }
+}
+```
+
+_css_
+
+```css
+@media (orientation: landscape) and (min-width: 576px) {
+  @content;
+}
+```
+
+---
+
+#### **\_media-down-portrait**
+
+_scss_
+
+```scss
+@include _media-down-portrait(sm) {
+  .elem {
+    color: #f00;
+  }
+}
+```
+
+_css_
+
+```css
+@media (orientation: portrait) and (max-width: 576px) {
+  @content;
+}
+```
+
+---
+
+#### **\_media-down-landscape**
+
+_scss_
+
+```scss
+@include _media-down-landscape(sm) {
+  .elem {
+    color: #f00;
+  }
+}
+```
+
+_css_
+
+```css
+@media (orientation: landscape) and (max-width: 576px) {
+  @content;
+}
+```
+
+---
+
+#### **\_media-screen**
+
+_scss_
+
+```scss
+@include _media-screen {
+  .elem {
+    color: #f00;
+  }
+}
+```
+
+_css_
+
+```css
+@media screen {
+  .elem {
+    color: #f00;
+  }
+}
+```
+
+---
+
+#### **\_media-print**
+
+_scss_
+
+```scss
+@include _media-print {
+  .elem {
+    color: #f00;
+  }
+}
+```
+
+_css_
+
+```css
+@media print {
+  .elem {
+    color: #f00;
+  }
+}
+```
+
+---
+
+#### **\_media-portrait**
+
+_scss_
+
+```scss
+@include _media-portrait {
+  .elem {
+    color: #f00;
+  }
+}
+```
+
+_css_
+
+```css
+@media (orientation: portrait) {
+  .elem {
+    color: #f00;
+  }
+}
+```
+
+---
+
+#### **\_media-landscape**
+
+_scss_
+
+```scss
+@include _media-landscape {
+  .elem {
+    color: #f00;
+  }
+}
+```
+
+_css_
+
+```css
+@media (orientation: landscape) {
+  .elem {
+    color: #f00;
+  }
+}
+```
+
+---
