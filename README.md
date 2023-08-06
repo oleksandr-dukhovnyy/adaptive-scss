@@ -124,7 +124,30 @@ body {
 }
 ```
 
-### MIXINS
+### set size manually
+
+You can also set size without $breakpoints-list.
+In normal situations it will not to be use, but if you need this, you can do this.
+
+```scss
+.elem {
+  @include _media-up(200px) {
+    background-color: green;
+  }
+}
+```
+
+Output css:
+
+```css
+@media (min-width: 200px) {
+  .elem {
+    background-color: green;
+  }
+}
+```
+
+### mixins
 
 ---
 
